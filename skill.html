@@ -127,14 +127,46 @@
 
         .skills-content {
             width: 80%;
-            max-width: 1200px;
+            max-width: 800px;
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 3rem;
             color: white;
-            /* box-shadow: 0 0 30px rgba(58, 211, 3, 0.3); */
+            box-shadow: 0 0 30px rgba(58, 211, 3, 0.3);
         }
+
+        /* Tambahan untuk box skill */
+            .bar {
+            background: rgba(247, 247, 247, 0.443);
+            padding: 1rem;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            transition: 0.3s ease;
+            box-shadow: 0 0 15px rgba(58, 211, 3, 0.2);
+            }
+
+            .bar:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(58, 211, 3, 0.4);
+            }
+
+            .bar .info img {
+            width: 60px;
+            height: auto;
+            margin-bottom: 5px;
+            border-radius: 5%;
+            }
+
+            .bar .info span {
+            display: block;
+            font-size: 1rem;
+            color: white;
+            font-weight: 500;
+            }
+
 
         .skills-header {
             text-align: center;
@@ -150,8 +182,9 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(5, minmax(80px, 0.3fr));
+            justify-items: center;
+            gap: 0.5rem;
         }
 
         .skill-category {
@@ -276,7 +309,7 @@
             }
         }
     </style>
-    <title>Skills - Portfolio Website</title>
+    <title>Amal Hidayat - Skills</title>
 </head>
 <body>
     <nav>
@@ -288,7 +321,7 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="about.html">About</a></div>
                 <div class="link active" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skill.html">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="project.html">Project</a></div>
+                <!-- <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="project.html">Project</a></div> -->
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact.html">Contact</a></div>
             </div>
         </div>
@@ -298,7 +331,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="skill.html">Skills</a>
-                <a href="project.html">Project</a>
+                <!-- <a href="project.html">Project</a> -->
                 <a href="contact.html">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
@@ -311,113 +344,123 @@
                 <h1>My Skills</h1>
             </div>
             <div class="skills-grid">
-                <!-- Frontend Development -->
-                <div class="skill-category" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                    <div class="skill-icon">
-                        <i class="fa fa-car"></i>
-                    </div>
-                    <h2>Frontend Development</h2>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>HTML</h3>
-                                <span>10%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 10%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>CSS</h3>
-                                <span>50%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>JavaScript</h3>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/html.png"/>
+                            <span></span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Backend Development -->
-                <div class="skill-category" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h2>Backend Development</h2>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>PHP</h3>
-                                <span>88%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>Node.js</h3>
-                                <span>82%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 82%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>Python</h3>
-                                <span>75%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 75%"></div>
-                            </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/css.png"/>
+                            <span></span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Design Tools -->
-                <div class="skill-category" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                    <div class="skill-icon">
-                        <i class="fas fa-paint-brush"></i>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/js.png"/>
+                            <span></span>
+                        </div>
                     </div>
-                    <h2>Design Tools</h2>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>Photoshop</h3>
-                                <span>92%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 92%"></div>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/python.png"/>
+                            <span></span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>Figma</h3>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/bootstrap.png"/>
+                            <span></span>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <h3>Adobe XD</h3>
-                                <span>78%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 78%"></div>
-                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/flask.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/django.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/mysql.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/mongodb.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/node.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/react.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/flutter.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/figma.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/figma.png"/>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bar">
+                        <div class="info">
+                            <img src="./img/skill/figma.png"/>
+                            <span></span>
                         </div>
                     </div>
                 </div>
