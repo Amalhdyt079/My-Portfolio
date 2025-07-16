@@ -492,19 +492,19 @@
                             <p>Projects Completed</p>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400"
-                            onclick="showExperience()">
+                            onclick="showEducation()">
                             <h3>3+</h3>
-                            <p>Years Experience</p>
+                            <p>Education History</p>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600"
                             onclick="showClients()">
-                            <h3>20+</h3>
-                            <p>Happy Clients</p>
+                            <h3>20+</h3>    
+                            <p>Achievements & Certificates</p>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800"
                             onclick="showAwards()">
                             <h3>15+</h3>
-                            <p>Awards Won</p>
+                            <p>Activities & Competitions</p>
                         </div>
                     </div>
                 </div>
@@ -550,14 +550,14 @@
             }
 
             // Fungsi untuk menampilkan daftar Experience
-            function showExperience() {
+            function showEducation() {
                 const aboutContent = document.getElementById('aboutContent');
                 aboutContent.innerHTML = `
                 <a href="about.html" class="back-button" onclick="restoreInitialContent()">
                     <i class="fas fa-arrow-left"></i> Back
                 </a>
                 <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>My Experience</h1>
+                    <h1>My Education</h1>
                 </div>
                 <div class="content-grid">
                     ${generateExperienceCards()}
@@ -574,7 +574,7 @@
                     <i class="fas fa-arrow-left"></i> Back
                 </a>
                 <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>Client Success Stories</h1>
+                    <h1>Achievements & Certificates</h1>
                 </div>
                 <div class="content-grid">
                     ${generateClientCards()}
@@ -591,7 +591,7 @@
                     <i class="fas fa-arrow-left"></i> Back
                 </a>
                 <div class="about-header" data-aos="fade-down" data-aos-duration="1500">
-                    <h1>Awards & Recognition</h1>
+                    <h1>Activities & Competitions</h1>
                 </div>
                 <div class="content-grid">
                     ${generateAwardCards()}
@@ -604,23 +604,29 @@
             function generateProjectCards() {
                 const projects = [
                     {
-                        title: "E-Commerce Platform",
-                        image: "img/mine.jpg",
+                        title: "Aplikasi Rekomendasi Wisata DIY",
+                        image: "img/project/spk.png",
                         description: "A full-stack e-commerce solution with payment integration",
-                        technologies: ["React", "Node.js", "MongoDB"]
+                        technologies: ["React", "Flask", "Simple Additive Weighting (SAW)"]
                     },
                     {
-                        title: "Portfolio Website",
-                        image: "img/mine.jpg",
+                        title: "Desain UI/UX Aplikasi Member Gym",
+                        image: "img/project/gym.png",
                         description: "Responsive portfolio website with modern animations",
-                        technologies: ["HTML", "CSS", "JavaScript"]
+                        technologies: ["Figma"]
                     },
                     {
-                        title: "Task Management App",
-                        image: "img/mine.jpg",
+                        title: "Aplikasi Presensi Karyawan",
+                        image: "img/project/presensi.png",
                         description: "Mobile-first task management application",
-                        technologies: ["Vue.js", "Firebase"]
-                    }
+                        technologies: ["Flutter", "Firebase"]
+                    },
+                    // {
+                    //     title: "Task Management App",
+                    //     image: "",
+                    //     description: "Mobile-first task management application",
+                    //     technologies: ["Vue.js", "Firebase"]
+                    // }
                     // Add more projects as needed
                 ];
 
@@ -646,16 +652,16 @@
             function generateExperienceCards() {
                 const experiences = [
                     {
-                        title: "Senior Web Developer",
-                        company: "Tech Solutions Inc.",
-                        period: "2021 - Present",
-                        description: "Leading frontend development team and implementing modern web solutions"
+                        title: "Universitas Jenderal Achmad Yani Yogyakarta",
+                        company: "Informatika.",
+                        period: "2022 - Present",
+                        description: "I’m an active Informatics student at Universitas Jenderal Achmad Yani Yogyakarta. During my studies, I’ve focused on deepening my skills in fullstack web development and modern technologies, while working on personal and team projects to enhance my professional capabilities."
                     },
                     {
-                        title: "Frontend Developer",
-                        company: "Digital Agency",
-                        period: "2019 - 2021",
-                        description: "Developed responsive websites and web applications"
+                        title: "MAS Al-Ikhlas Ujung",
+                        company: "MIPA",
+                        period: "2019 - 2022",
+                        description: "Graduated from MAS Al-Ikhlas Ujung, where I discovered my passion for technology and programming. During high school, I was also involved in student organizations that helped strengthen my communication and teamwork skills."
                     }
                     // Add more experiences as needed
                 ];
@@ -708,14 +714,14 @@
             function generateAwardCards() {
                 const awards = [
                     {
-                        title: "Best Web Design",
-                        organization: "Design Awards 2023",
-                        description: "Recognition for exceptional web design and user experience"
+                        title: "Participant – 2nd Technovation FTTI 2024",
+                        organization: "Fakultas Teknik dan Teknologi Informasi",
+                        description: "Showcased Attendance App built with Flutter & REST API; presented app workflow, features, and technologies to judges and fellow participants; received feedback for further UI/UX improvements."
                     },
                     {
-                        title: "Innovation Award",
-                        organization: "Tech Summit 2022",
-                        description: "Awarded for innovative use of emerging technologies"
+                        title: "Participant – Technovation FTTI 2024",
+                        organization: "Fakultas Teknik dan Teknologi Informasi",
+                        description: "Recognition for exceptional web design and user experiencePresented Tourism Recommendation System built with React.js and Flask; explained use of SAW (Simple Additive Weighting) method and application flow to the jury; gathered suggestions to enhance recommendation accuracy and performance."
                     }
                     // Add more awards as needed
                 ];
@@ -724,7 +730,7 @@
                 <div class="content-card" data-aos="fade-up">
                     <div class="card-info">
                         <div class="award-icon">
-                            <i class="fas fa-trophy"></i>
+                            <i class="fas fa-rocket"></i>
                         </div>
                         <h3>${award.title}</h3>
                         <h4>${award.organization}</h4>
@@ -758,17 +764,17 @@
                                 <h3>50+</h3>
                                 <p>Projects Completed</p>
                             </div>
-                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showExperience()">
+                            <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400" onclick="showEducation()">
                                 <h3>3+</h3>
-                                <p>Years Experience</p>
+                                <p> Education History</p>
                             </div>
                             <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600" onclick="showClients()">
                                 <h3>20+</h3>
-                                <p>Happy Clients</p>
+                                <p>Achievements & Certificates</p>
                             </div>
                             <div class="stat-item" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800" onclick="showAwards()">
                                 <h3>15+</h3>
-                                <p>Awards Won</p>
+                                <p>Activities & Competitions</p>
                             </div>
                         </div>
                     </div>
