@@ -604,31 +604,30 @@
                         title: "Aplikasi Rekomendasi Wisata DIY",
                         image: "img/project/spk.png",
                         description: "A full-stack e-commerce solution with payment integration",
-                        technologies: ["React", "Flask", "Simple Additive Weighting (SAW)"]
+                        technologies: ["React", "Flask", "Simple Additive Weighting (SAW)"],
+                        github: "",
+                        app: ""
                     },
                     {
                         title: "Desain UI/UX Aplikasi Member Gym",
                         image: "img/project/gym.png",
                         description: "Responsive portfolio website with modern animations",
-                        technologies: ["Figma"]
+                        technologies: ["Figma"],
+                        app: "https://www.figma.com/proto/g3koorSQHDDdQGEidozLoY/Aplikasi-Member-Gym?node-id=858-942&t=EDr31T3eXlFuyOL6-1&scaling=scale-down&content-scaling=fixed&page-id=58%3A46&starting-point-node-id=301%3A631"
                     },
                     {
                         title: "Aplikasi Presensi Karyawan",
                         image: "img/project/presensi.png",
                         description: "Mobile-first task management application",
-                        technologies: ["Flutter", "Firebase"]
+                        technologies: ["Flutter", "Firebase"],
+                        github: "https://github.com/Amalhdyt079/My-Mobile-App.git",
+                        app: "https://absensi-c86ac.web.app/"
                     },
-                    // {
-                    //     title: "Task Management App",
-                    //     image: "",
-                    //     description: "Mobile-first task management application",
-                    //     technologies: ["Vue.js", "Firebase"]
-                    // }
                     // Add more projects as needed
                 ];
 
                 return projects.map(project => `
-                <div class="content-card" data-aos="fade-up">
+                    <div class="content-card" data-aos="fade-up">
                     <div class="card-image">
                         <img src="${project.image}" alt="${project.title}">
                     </div>
@@ -636,14 +635,20 @@
                         <h3>${project.title}</h3>
                         <p>${project.description}</p>
                         <div class="technologies">
-                            ${project.technologies.map(tech => `
-                                <span class="technology-tag">${tech}</span>
-                            `).join('')}
+                        ${project.technologies.map(tech => `
+                            <span class="technology-tag">${tech}</span>
+                        `).join('')}
                         </div>
+                        ${project.github || project.app ? `
+                        <div style="margin-top: 8px; font-size: 13px;">
+                            ${project.github ? `<a href="${project.github}" target="_blank" style="margin-right: 10px; text-decoration: none; color: #0366d6;">🔗 GitHub</a>` : ''}
+                            ${project.app ? `<a href="${project.app}" target="_blank" style="text-decoration: none; color: #28a745;">🌐 Live</a>` : ''}
+                        </div>
+                        ` : ''}
                     </div>
-                </div>
-            `).join('');
-            }
+                    </div>
+                `).join('');
+                }
 
             // Fungsi pembantu untuk menghasilkan kartu experience
             function generateExperienceCards() {
